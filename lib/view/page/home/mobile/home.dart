@@ -12,18 +12,9 @@ class _MobilePageHomeState extends State<MobilePageHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AppBar'),
+        title: Text('This is Mobile'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
+      body: Center(),
     );
   }
 }
