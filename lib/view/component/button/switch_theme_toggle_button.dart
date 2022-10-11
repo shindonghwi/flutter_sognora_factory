@@ -31,7 +31,6 @@ class __SwitchThemeToggleButtonState extends State<SwitchThemeToggleButton> {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return IconButton(
       icon: Image(image: AssetImage(_imagePath)),
-      iconSize: 50,
       onPressed: () {
         onThemeChanged(!_isDarkMode, themeNotifier);
       },
