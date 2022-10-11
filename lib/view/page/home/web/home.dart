@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sognora_factory/view/component/button/switch_theme_toggle_button.dart';
 
 class WebPageHome extends StatefulWidget {
   const WebPageHome({super.key});
@@ -13,6 +14,7 @@ class _WebPageHomeState extends State<WebPageHome> {
     return Scaffold(
       appBar: AppBar(
         title: Text('AppBar'),
+        actions: [SwitchThemeToggleButton()],
       ),
       body: Center(
         child: Column(
