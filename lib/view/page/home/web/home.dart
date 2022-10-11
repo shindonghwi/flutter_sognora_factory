@@ -16,15 +16,24 @@ class _WebPageHomeState extends State<WebPageHome> {
         title: Text('AppBar'),
         actions: [SwitchThemeToggleButton()],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints viewportConstraints) {
+          return Column(children: [
+            SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 1.0,
+                  minWidth: viewportConstraints.maxWidth,
+                ),
+                child: Column(
+                  children: [
+                    Text(style: TextStyle(fontSize: 35),'AppBar'),
+                  ],
+                ),
+              ),
+            )
+          ]);
+        },
       ),
     );
   }
